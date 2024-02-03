@@ -1,9 +1,17 @@
+import {Navbar} from "./components/layout/Navbar"
+import ItemListContainer from "./components/pages/Itemlistcontainer"
 
-function App() {
+
+
+const App =() =>  {
 
 
   return(
-   <div>hola lau</div>
+   <div>
+    <Navbar />
+    <ItemListContainer/>
+    <h1>hola lau</h1>
+    </div>
   )
 }
 
