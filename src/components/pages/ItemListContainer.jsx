@@ -1,7 +1,15 @@
-import App from "../../App"
+import {ProductCard} from "../common/ProductCard"
 
-const ItemListConteiner=()=>{
-    return <h1>Aca van los productos</h1>
+export const ItemListContainer = ({greetings}) => {
+  return (
+    <div>ItemListContainer
+         <h2>Aca van mis productos</h2>
+         <h3>{greetings} </h3>
+            <ProductCard/>
+    </div>
+
+  )
 }
 
-export default ItemListContainer
+
+ 

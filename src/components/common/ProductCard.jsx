@@ -1,6 +1,6 @@
 
 
-export const ProductCard = () => {
+export function ProductCard() {
   return (
     <div>ProductCard</div>
   )
