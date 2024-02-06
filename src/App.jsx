@@ -1,20 +1,13 @@
-import {Navbar} from "./components/layout/Navbar"
-import {ItemListContainer} from "./components/pages/Itemlistcontainer"
+import { Navbar } from "./components/layout/Navbar";
+import { ItemListContainer } from "./components/pages/Itemlistcontainer";
 
-
-
-const App =() =>  {
-
-
-  return(
-   <div>
-    <Navbar />
-    <ItemListContainer greetings="hola como estas?"/>
-
-    <h1>hola lau</h1>
+const App = () => {
+  return (
+    <div>
+      <Navbar />
+      <ItemListContainer greetings="hola como estas?" />
     </div>
-  )
-}
+  );
+};
 
-export default App
-
+export default App;
