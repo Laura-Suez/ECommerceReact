@@ -1,73 +1,43 @@
-import { CartWidget } from "../common/CartWidget";
+import * as React from "react";
+import { Link } from "react-router-dom";
+import { FaHome } from "react-icons/fa";
 
-export const Navbar = () => {
+import CartWidget from "../common/CartWidget";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import HomeIcon from "@mui/icons-material/Menu";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+
+export function Navbar() {
   return (
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="" alt="" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Productos
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#"></a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#"></a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#"></a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-        <h4>Carrito</h4>
-        <CartWidget />
-      </div>
-    </nav>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <Link to="/">
+            <FaHome size={30} />
+          </Link>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Mis alfombras
+          </Typography>
+          <Link to="/category/personajes">
+            <Button color="inherit">Personajes</Button>
+          </Link>
+          <Link to="/category/animales">
+            <Button color="inherit">Animales</Button>
+          </Link>
+          <Link to="/category/geometricas">
+            <Button color="inherit">Geometricas</Button>
+          </Link>
+          <Button color="inherit">
+            <CartWidget />
+          </Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
-};
-export default Navbar;
+}
