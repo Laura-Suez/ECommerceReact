@@ -10,7 +10,7 @@ import { CardActionArea } from "@mui/material";
 export function ProductCard({ id, img, title, description, price }) {
   return (
     <Link to={`/item/${id}`}>
-      <Card sx={{ maxWidth: 345, height: 400 }}>
+      <Card className="card" sx={{ width: 305, height: 400 }}>
         <CardActionArea>
           <CardMedia component="img" height="300" image={img} alt="Alfombra" />
           <CardContent>
