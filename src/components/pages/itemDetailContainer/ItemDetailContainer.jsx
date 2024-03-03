@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getProduct } from "../../../productsMock";
 import { useParams, useNavigate } from "react-router-dom";
 import { ItemDetail } from "./ItemDetail";
+import { Spinner } from "../../common/Spinner";
 
 export const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -30,12 +31,6 @@ export const ItemDetailContainer = () => {
   };
 
   return (
-    <>
-      {isLoading ? (
-        <h2>Cargando producto...</h2>
-      ) : (
-        <ItemDetail item={item} onAdd={onAdd} />
-      )}
-    </>
+    <>{isLoading ? <Spinner /> : <ItemDetail item={item} onAdd={onAdd} />}</>
   );
 };

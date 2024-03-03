@@ -2,11 +2,13 @@ import ItemList from "./ItemList";
 import { getProducts } from "../../../productsMock";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Spinner } from "../../common/Spinner";
 
 const ItemListContainer = () => {
   const { category } = useParams();
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  console.log(category);
 
   useEffect(() => {
     setIsLoading(true);
@@ -24,15 +26,7 @@ const ItemListContainer = () => {
     });
   }, [category]);
 
-  return (
-    <>
-      {isLoading ? (
-        <h2>Cargando productos...</h2>
-      ) : (
-        <ItemList products={products} />
-      )}
-    </>
-  );
+  return <>{isLoading ? <Spinner /> : <ItemList products={products} />}</>;
 };
 
 export default ItemListContainer;
