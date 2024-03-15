@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
-
 import CartWidget from "../common/CartWidget";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
