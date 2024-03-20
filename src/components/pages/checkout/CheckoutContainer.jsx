@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Checkout } from "./Checkout.Jsx";
+import { Checkout } from "./Checkout";
 
 export const CheckoutContainer = () => {
   const [userInfo, setUserInfo] = useState({
