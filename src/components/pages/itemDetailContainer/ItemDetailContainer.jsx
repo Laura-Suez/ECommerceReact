@@ -12,7 +12,9 @@ export const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const { addToCart } = useContext(CartContext);
+  const { addToCart, getTotalQuantityById } = useContext(CartContext);
+
+  const initial = getTotalQuantityById(+id);
 
   //  const navigate = useNavigate()
 
@@ -32,6 +34,12 @@ export const ItemDetailContainer = () => {
   };
 
   return (
-    <>{isLoading ? <Spinner /> : <ItemDetail item={item} onAdd={onAdd} />}</>
+    <>
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <ItemDetail item={item} onAdd={onAdd} initial={initial} />
+      )}
+    </>
   );
 };
