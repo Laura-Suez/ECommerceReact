@@ -1,5 +1,5 @@
 import ItemCountContainer from "../../common/itemCount/ItemCountContainer";
-import "./ItemDetail.css";
+import "./itemDetail.css";
 export const ItemDetail = ({ item, onAdd, initial }) => {
   return (
     <div>
