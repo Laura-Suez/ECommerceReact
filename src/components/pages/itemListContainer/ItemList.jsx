@@ -1,8 +1,11 @@
+import { AgregarDocs } from "../../../AgregarProductos";
 import { ProductCard } from "../../common/ProductCard";
 import "./ItemList.css";
+
 const ItemList = ({ products }) => {
   return (
     <div className="cards-container">
+      {/* <AgregarDocs /> */}
       {products.map(({ id, img, title, description, price }) => {
         return (
           <ProductCard

@@ -54,7 +54,6 @@ export let products = [
     stock: 1,
     category: "geometricas",
   },
-
   {
     id: 7,
     title: "Alfombra Serpiente",

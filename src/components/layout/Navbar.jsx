@@ -32,11 +32,7 @@ export function Navbar() {
           <Link to="/category/geometricas">
             <Button color="inherit">Geometricas</Button>
           </Link>
-          <Link to="/cart">
-            <Button color="inherit">
-              <CartWidget />
-            </Button>
-          </Link>
+          <CartWidget />
         </Toolbar>
       </AppBar>
     </Box>
